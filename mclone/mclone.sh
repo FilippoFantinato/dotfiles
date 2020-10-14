@@ -11,7 +11,7 @@ while read -r line; do
 		mkdir -p $nextDirectory
 		cd $nextDirectory
 	else
-		if [[ -n -z $line ]]; then
+		if [[ ! -z $line ]]; then
 			git clone $line
 		fi
 	fi
