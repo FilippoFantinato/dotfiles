@@ -1,0 +1,21 @@
+#!/bin/bash
+
+mac="18:70:3B:FA:73:28"
+name="Huawei 3i"
+
+bluetooth_battery_output=`bluetooth_battery $mac`
+bluetooth_battery_output=`echo $bluetooth_battery_output | sed s/"$mac"/"$name"/`
+level_battery=`echo $bluetooth_battery_output | rev | cut -d' ' -f 1 | sed s/%// | rev`
+
+if [[ $level_battery -le 10 ]]; then
+	urgency="critical"
+	icon="battery-empty"
+elif [[ $level_battery -le 50 ]]; then
+	urgency="normal"
+	icon="battery-low"
+else
+	urgency="low"
+	icon="battery"
+fi
+
+notify-send --icon=$icon "$bluetooth_battery_output"

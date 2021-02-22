@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jq -cr '.videos[] | .url,.filename' $1 | parallel --max-args 2 blob2mp4 {1} {2}
+
+notify-send -i emblem-default "Download finished"

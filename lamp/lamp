@@ -1,0 +1,73 @@
+#!/bin/bash
+
+init="systemctl"
+server="httpd.service"
+db="mariadb.service"
+
+handle_server()
+{
+	case $1 in
+
+		'start')
+			sudo $init start $server 
+		;;
+
+		'stop')
+			sudo $init stop $server
+		;;
+
+		'restart')
+			sudo $init restart $server 
+		;;
+
+		*)
+			print_usage
+		;;
+	esac
+}
+
+handle_db()
+{
+	case $1 in
+
+		'start')
+			sudo $init start $db 
+		;;
+
+		'stop')
+			sudo $init stop $db
+		;;
+
+		'restart')
+			sudo $init restart $db 
+		;;
+
+		*)
+			print_usage
+		;;
+	esac
+}
+
+print_usage()
+{
+	echo "Usage";
+}
+
+case $1 in
+	'all')
+		handle_server $2
+		handle_db $2
+	;;
+
+	'server')
+    	handle_server $2
+    ;;
+
+	'db')
+		handle_db $2
+    ;;
+
+	*)
+		print_usage
+    ;;
+esac

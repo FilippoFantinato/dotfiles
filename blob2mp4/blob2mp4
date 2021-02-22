@@ -1,0 +1,10 @@
+#!/bin/bash
+
+link=$1
+filename=$2
+
+echo "Downloading $filename ..."
+
+ffmpeg -i "$link" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 "$filename.mp4"
+
+echo "Downloaded $filename"
