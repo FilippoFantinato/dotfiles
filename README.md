@@ -1,2 +1,2 @@
-# Scripts
-My personal dotfiles
+# Dotfiles
+My personal dotfiles and scripts
