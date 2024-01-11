@@ -1,0 +1,56 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+	"theme": "ayu-mirage.sublime-theme",
+	"index_files": true,
+	"file_exclude_patterns":
+    [
+        ".gitkeep",
+        ".keep",
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace",
+        ".byebug_history"
+    ],
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        "tmp",
+        ".bundle",
+        "log",
+        ".sass-cache",
+        "coverage",
+        "node_modules",
+        ".Trash",
+        ".Trash-*",
+        ".ruby-lsp"
+    ],
+    "font_face": "Fira Code",
+    "rulers":
+    [
+        120
+    ],
+}

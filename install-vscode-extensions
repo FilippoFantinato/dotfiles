@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=./vscode-extensions.txt
+for extension in `cat $file`;
+do
+	code --install-extension $extension
+done
+

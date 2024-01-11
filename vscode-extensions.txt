@@ -1,0 +1,1 @@
+James-Yu.latex-workshop LiamWalsh98.vscode-nusmv ms-python.python ms-python.vscode-pylance ms-vscode.cmake-tools ms-vscode.cpptools ms-vscode.cpptools-extension-pack ms-vscode.cpptools-themes PKief.material-icon-theme sdras.night-owl twxs.cmake
