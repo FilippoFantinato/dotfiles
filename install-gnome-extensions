@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=./gnome-extensions.txt
+for extension in `cat $file`;
+do
+	dbus-send --session --type=method_call --print-reply --dest=org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions.InstallRemoteExtension string:$extension
+done
+

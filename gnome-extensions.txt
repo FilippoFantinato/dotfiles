@@ -1,0 +1,12 @@
+gsconnect@andyholmes.github.io
+dash-to-dock@micxgx.gmail.com
+user-theme@gnome-shell-extensions.gcampax.github.com
+just-perfection-desktop@just-perfection
+search-light@icedman.github.com
+blur-my-shell@aunetx
+appindicatorsupport@rgcjonas.gmail.com
+tiling-assistant@leleat-on-github
+quick-settings-tweaks@qwreey
+caffeine@patapon.info
+clipboard-indicator@tudmotu.com
+places-menu@gnome-shell-extensions.gcampax.github.com
