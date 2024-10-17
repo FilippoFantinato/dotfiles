@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -110,45 +110,3 @@ alias pip='python -m pip'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f "/home/filippofantinato/.ghcup/env" ] && source "/home/filippofantinato/.ghcup/env" # ghcup-env
-
-source <(fzf --zsh)
-
-FZF_FD_OPTS="--hidden --strip-cwd-prefix --exclude .git"
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git --exclude .cargo --exclude node_modules"
-export FZF_CTRL_T_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git --exclude .cargo --exclude node_modules"
-export FZF_ALT_C_COMMAND="fd --type d --hidden --strip-cwd-prefix --exclude .git --exclude .cargo --exclude node_modules"
-
-_fzf_compgen_path() {
-    fd --hidden --exclude .git --exclude .cargo --exclude node_modules . "${1}"
-}
-
-_fzf_compgen_dir() {
-    fd --type d  --hidden --exclude .git --exclude .cargo --exclude node_modules . "${1}"
-}
-
-source ~/fzf-git.sh/fzf-git.sh
-
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
-_fzf_comprun() {
-  local command=$1
-  shift
-
-  case "$command" in
-    cd)           fzf --preview "eza --tree --color=always {} | head -200" "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-    ssh)          fzf --preview "dig {}" "$@" ;;
-    *)            fzf --preview "--preview 'bat -n --color=always --line-range :500 {}'" "$@" ;;
-  esac
-}
-
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
-

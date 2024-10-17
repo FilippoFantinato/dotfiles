@@ -1,0 +1,7 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "buffer",
+        "augroup"
+    ]
+}
