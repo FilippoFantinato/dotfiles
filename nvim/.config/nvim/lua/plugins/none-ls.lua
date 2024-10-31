@@ -14,7 +14,8 @@ local latexindent_helper = function()
 		},
 		generator_opts = {
 			command = "latexindent",
-			args = { "-l", "/home/filippofantinato//.indentconfig.yaml" },
+			-- args = { "-l" },
+			to_stdin = true,
 		},
 		factory = h.formatter_factory,
 	})
@@ -41,7 +42,12 @@ return {
 			sources = {
 				nls.builtins.formatting.stylua,
 				nls.builtins.completion.spell,
-				nls.builtins.formatting.prettier,
+				nls.builtins.formatting.prettier.with({
+					extra_args = {
+						"--trailing-comma",
+						"none",
+					},
+				}),
 				latexindent,
 			},
 			on_attach = function(client, bufnr)

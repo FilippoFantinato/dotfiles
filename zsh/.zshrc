@@ -11,6 +11,8 @@ export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

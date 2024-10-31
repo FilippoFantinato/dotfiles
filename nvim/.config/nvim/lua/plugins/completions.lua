@@ -11,16 +11,15 @@ return {
 	},
 	{
 		"micangl/cmp-vimtex",
-    enabled = false,
 		config = function()
 			require("cmp_vimtex").setup()
 		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-path"
-    },
+		dependencies = {
+			"hrsh7th/cmp-path",
+		},
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -45,8 +44,8 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-					-- { name = "vimtex" },
-          { name = 'path' }
+					{ name = "vimtex" },
+					{ name = "path" },
 				}, {
 					{ name = "buffer" },
 				}),
