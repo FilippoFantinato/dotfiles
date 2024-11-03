@@ -1,8 +1,0 @@
-# OS generated files #
-######################
-.*.swp
-.bundle
-vendor/bundle
-.DS_Store
-Icon
-*.pyc

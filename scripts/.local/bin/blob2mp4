@@ -1,0 +1,17 @@
+#!/bin/bash
+
+link=$1
+filename=$2
+
+if [[ "$filename" != *.mp4 ]]; then
+	filename=$filename.mp4
+fi
+
+if [[ ! -f $filename ]]; then
+	echo "Downloading $filename ..."
+	ffmpeg -i "$link" -bsf:a aac_adtstoasc -vcodec copy -c copy "$filename" > /dev/null
+	echo "Downloaded $filename"
+else
+	echo "$filename already downloaded"
+fi
+

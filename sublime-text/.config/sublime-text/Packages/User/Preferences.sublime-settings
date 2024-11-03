@@ -2,7 +2,7 @@
 	"ignored_packages":
 	[
 		"Vintage",
-	],
+    ],
 	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"theme": "ayu-mirage.sublime-theme",
 	"index_files": true,
@@ -53,4 +53,5 @@
     [
         120
     ],
+    "font_size": 10,
 }

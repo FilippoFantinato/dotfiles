@@ -1,0 +1,38 @@
+[user]
+	name = FilippoFantinato
+	email = fantinato.filippo99@gmail.com
+[init]
+	defaultBranch = main
+[status]
+	short = true
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore-global
+[fetch]
+	prune = true
+[pull]
+	ff = only
+[alias]
+  empty = git commit --allow-empty
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff section's
+    side-by-side = true
+    line-numbers = true
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+

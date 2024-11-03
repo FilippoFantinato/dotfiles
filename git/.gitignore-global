@@ -1,0 +1,16 @@
+# MacOS generated files #
+######################
+.*.swp
+.bundle
+vendor/bundle
+.DS_Store
+Icon
+*.pyc
+
+# Linux #
+######################
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*

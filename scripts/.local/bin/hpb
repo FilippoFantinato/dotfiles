@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mac="18:70:3B:FA:73:28"
-name="Huawei 3i"
+mac="E8:9E:13:13:82:50"
+name="Sony"
 
 bluetooth_battery_output=`bluetooth_battery $mac`
 bluetooth_battery_output=`echo $bluetooth_battery_output | sed s/"$mac"/"$name"/`
