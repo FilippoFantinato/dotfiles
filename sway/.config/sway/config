@@ -92,7 +92,7 @@ input "type:keyboard" {
     # mouse button for dragging.
     floating_modifier $mod normal
 
-    # Reload the configuration file
+    # Reload the configuration
     bindsym $mod+Shift+c reload
 
     # Suspend
@@ -216,8 +216,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym $mod+p exec lowfi play --random
-bindsym $mod+Shift+p exec pkill -9 -f lowfi
+# bindsym $mod+p exec lowfi play --random
+# bindsym $mod+Shift+p exec pkill -9 -f lowfi
 
 
 default_border pixel 3
