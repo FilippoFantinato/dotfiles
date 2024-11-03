@@ -2,56 +2,62 @@
 
 Personal dotfiles and scripts managed with GNU stow.
 
+## Sway
+
 - foot terminal
-- neovim
 - rofi
 - sway
 - swaylock
 - swaync
 - waybar
+- wlogout
+
+## Other
+
+- bash
+- VS Code
+- git
+- neovim
+- sublime text
 - zathura
 - zsh
 
-## Gnome shell configuration files
-
-Dump dconf settings:
-
-```
-$ dconf dump / > dconf-settings.ini
-```
-
-Restore dconf settings:
-
-```
-$ dconf load / < dconf-settings
-```
-
-## Extensions
-
-### Gnome shell
+## Gnome shell
 
 Dump gnome extensions:
 
-```
+```bash
 $ gnome-extensions list > gnome-extensions.txt
 ```
 
 Install gnome extensions:
 
-```
+```bash
 $ ./install-gnome-extensions
 ```
 
-### VS Code
+Dump dconf settings:
+
+```bash
+$ dconf dump / > dconf-settings.ini
+```
+
+Restore dconf settings:
+
+```bash
+$ dconf load / < dconf-settings
+```
+
+## VS Code
 
 Dump VS Code extensions:
 
-```
+```bash
 $ code --list-extensions > vscode-extensions.txt
 ```
 
 Install VS Code extensions:
 
-```
+```bash
 $ ./install-vscode-extensions
 ```
