@@ -24,28 +24,28 @@ Personal dotfiles and scripts managed with GNU stow.
 
 ## Gnome shell
 
-Dump gnome extensions:
-
-```bash
-$ gnome-extensions list > gnome-extensions.txt
-```
-
-Install gnome extensions:
-
-```bash
-$ ./install-gnome-extensions
-```
-
 Dump dconf settings:
 
 ```bash
-$ dconf dump / > dconf-settings.ini
+dconf dump / > dconf-settings.ini
 ```
 
 Restore dconf settings:
 
 ```bash
-$ dconf load / < dconf-settings
+dconf load / < dconf-settings
+```
+
+Dump gnome extensions:
+
+```bash
+gnome-extensions list > gnome-extensions.txt
+```
+
+Install gnome extensions:
+
+```bash
+./install-gnome-extensions
 ```
 
 ## VS Code
@@ -53,11 +53,11 @@ $ dconf load / < dconf-settings
 Dump VS Code extensions:
 
 ```bash
-$ code --list-extensions > vscode-extensions.txt
+code --list-extensions > vscode-extensions.txt
 ```
 
 Install VS Code extensions:
 
 ```bash
-$ ./install-vscode-extensions
+./install-vscode-extensions
 ```
