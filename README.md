@@ -12,7 +12,7 @@ Personal dotfiles and scripts managed with GNU stow.
 - zathura
 - zsh
 
-## Configuration files
+## Gnome shell configuration files
 
 Dump dconf settings:
 
