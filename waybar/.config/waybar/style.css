@@ -1,9 +1,10 @@
 @import "mocha.css";
 
 * {
-  font-family: "FiraCode", "Font Awesome 6 Brands", monospace;
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font",
+    "Font Awesome 6 Brands", monospace;
   /* font-family: "FiraCode Nerd Font"; */
-  font-size: 12px;
+  font-size: 13px;
   min-height: 0;
 }
 
