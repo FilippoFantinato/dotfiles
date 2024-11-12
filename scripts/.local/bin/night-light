@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if pgrep -x wlsunset > /dev/null; then
+    pkill -9 wlsunset
+    echo '{ "text": "off" }'
+else
+  wlsunset &
+  echo '{ "text": "on" }'
+fi
+

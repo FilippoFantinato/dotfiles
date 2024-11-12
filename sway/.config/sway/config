@@ -225,6 +225,10 @@ default_floating_border pixel 3
 titlebar_padding 1
 titlebar_border_thickness 0
 
+exec --no-startup-id wlsunset -S 07:00 -s 18:30
+
+for_window [app_id="google-chrome"] inhibit_idle fullscreen
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d

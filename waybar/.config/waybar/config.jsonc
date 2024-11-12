@@ -72,19 +72,19 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{volume}% <span size='large' rise='-1500'>{icon}</span> {format_source}",
-    "format-bluetooth": "{volume}% <span size='large' rise='-1500'>{icon}</span> {format_source}",
-    "format-bluetooth-muted": " <span size='large' rise='-1500'>{icon}</span> {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% <span size='large' rise='-1500'></span>",
-    "format-source-muted": "",
+    "format-bluetooth": "{volume}% <span size='large' rise='-1500'>{icon} </span> {format_source}",
+    "format-bluetooth-muted": "<span size='large' rise='-1500'>󰝟 {icon} </span> {format_source}",
+    "format-muted": "<span size='large' rise='-1500'>󰝟</span> {format_source}",
+    "format-source": "{volume}% <span size='large' rise='-1500'>󰍬</span>",
+    "format-source-muted": "󰍭",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
+      "headphone": "󰋎",
+      "hands-free": "󰥰",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰏲",
       "car": "󰄋",
-      "default": ["", "", ""]
+      "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click": "pavucontrol"
   },
@@ -93,8 +93,8 @@
     "tooltip-format": "power profile: {profile}\ndriver: {driver}",
     "tooltip": false,
     "format-icons": {
-      "default": "",
-      "performance": "",
+      "default": "󱐋",
+      "performance": "󱐋",
       "balanced": "󰗑",
       "power-saver": "󰌪"
     }
@@ -129,11 +129,11 @@
   },
   "bluetooth": {
     "format": "<span size='large' rise='-1500'>{icon}</span> {status}",
-    "format-connected": "<span size='large' rise='-1500'>{icon}</span> {device_alias}",
-    "format-connected-battery": "<span size='large' rise='-1500'>{icon}</span> {device_alias} {device_battery_percentage}%",
+    "format-connected": "<span size='large' rise='-1500'>󰂯</span> {device_alias}",
+    "format-connected-battery": "<span size='large' rise='-1500'>󰂯</span> {device_alias} ({device_battery_percentage}%)",
     "on-click": "~/.local/bin/rofi-bluetooth-menu",
     "format-icons": {
-      "on": "",
+      "on": "󰂯",
       "off": "󰂲"
     }
   }

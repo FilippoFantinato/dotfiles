@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+command -v notify-send >/dev/null && \
+VALUE=$(brightnessctl --percentage get) && \
+notify-send -e -h string:x-canonical-private-synchronous:brightness \
+-i "$([ "$VALUE" -le 10 ] && echo 'display-brightness-off' || ([ "$VALUE" -le 25 ] && echo 'display-brightness-low' || ([ "$VALUE" -le 75 ] && echo 'display-brightness-medium' || echo 'display-brightness-high')))" -h "int:value:$VALUE" -t 800 "Brightness: ${VALUE}%"
+
