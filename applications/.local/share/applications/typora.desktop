@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Typora
 Exec=/opt/typora/Typora %u
-Icon=~/.local/share/icons/custom/typora.svg
-NoDisplay=false
+Icon=/home/filippofantinato/.local/share/icons/custom/typora.svg
+NoDisplay=falset
 Type=Application
 MimeType=x-scheme-handler/eclipse+command;
 
