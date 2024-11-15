@@ -56,11 +56,12 @@ Install VS Code extensions:
 
 - [Oh My zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [FZF git](https://github.com/junegunn/fzf-git.sh)
 
 ```bash
 dnf install sway-config-fedora      \
             swaync wlogout wlsunset \
-            zsh tmux
+            zsh tmux fzf
 ```
 
 ## Fonts
