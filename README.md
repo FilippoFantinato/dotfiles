@@ -61,7 +61,8 @@ Install VS Code extensions:
 ```bash
 dnf install sway-config-fedora      \
             swaync wlogout wlsunset \
-            zsh tmux fzf
+            zathura fzf             \
+            zsh tmux
 ```
 
 ## Fonts
@@ -71,6 +72,6 @@ dnf install sway-config-fedora      \
 - [MesloLGS Nerd Font (zsh version)](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
 
 ```bash
-dnf install cascadia-mono-nf-fonts \ 
+dnf install cascadia-mono-nf-fonts \
             fira-code-fonts
 ```
