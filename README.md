@@ -64,13 +64,14 @@ Install VS Code extensions:
 
 ## Dependencies
 
-
 ```bash
-dnf install swaync wlogout wlsunset \ 
+dnf install sway-config-fedora      \
+            swaync wlogout wlsunset \
             zsh tmux
 ```
 
 ## Fonts
+
 - Fira Code (Nerd Font)
 - Cascadia Mono Nerd Font
 - [MesloLGS Nerd Font (zsh version)](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
