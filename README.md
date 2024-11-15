@@ -64,6 +64,9 @@ Install VS Code extensions:
 
 ## Dependencies
 
+- [Oh My zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
 ```bash
 dnf install sway-config-fedora      \
             swaync wlogout wlsunset \
