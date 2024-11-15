@@ -64,7 +64,17 @@ Install VS Code extensions:
 
 ## Dependencies
 
+
 ```bash
 dnf install swaync wlogout wlsunset \ 
             zsh tmux
+```
+
+## Fonts
+- Fira Code (Nerd Font)
+- Cascadia Mono Nerd Font
+- [MesloLGS Nerd Font (zsh version)](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
+
+```bash
+dnf install cascadia-mono-nf-fonts fira-code-fonts
 ```
