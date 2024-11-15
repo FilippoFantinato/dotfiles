@@ -75,7 +75,7 @@ dnf install sway-config-fedora      \
 
 ## Fonts
 
-- Fira Code (Nerd Font)
+- Fira Code ([Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode))
 - Cascadia Mono Nerd Font
 - [MesloLGS Nerd Font (zsh version)](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
 
