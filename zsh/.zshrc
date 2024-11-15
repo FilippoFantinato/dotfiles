@@ -79,7 +79,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(
+  git 
+  # zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,12 +117,6 @@ alias pip='python -m pip'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f "/home/filippofantinato/.ghcup/env" ] && source "/home/filippofantinato/.ghcup/env" # ghcup-env
-
 source <(fzf --zsh)
 
 FZF_FD_OPTS="--hidden --strip-cwd-prefix --exclude .git"
@@ -150,7 +148,4 @@ _fzf_comprun() {
     *)            fzf --preview "--preview 'bat -n --color=always --line-range :500 {}'" "$@" ;;
   esac
 }
-
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
 

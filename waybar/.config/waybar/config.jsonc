@@ -30,10 +30,10 @@
     "spacing": 10
   },
   "sway/language": {
-    "format": "<span size='large' rise='-1500'>󰌌</span> {}"
+    "format": "<span size='x-large' rise='-1500'>󰌌</span> {}"
   },
   "custom/music": {
-    "format": "<span size='large' rise='-1500'>󰝚</span> {}",
+    "format": "<span size='x-large' rise='-1500'>󰝚</span> {}",
     "escape": true,
     "interval": 5,
     "tooltip": false,
@@ -43,11 +43,11 @@
   },
   "clock": {
     "tooltip-format": "<tt>{calendar}</tt>",
-    "format": "<span size='large' rise='-1500'>󰥔</span> {:%R  <span size='large' rise='-1500'>󰃭</span> %d %b, %a}"
+    "format": "<span size='x-large' rise='-1500'>󰥔</span> {:%R  <span size='x-large' rise='-1500'>󰃭</span> %d %b, %a}"
   },
   "backlight": {
     "device": "intel_backlight",
-    "format": "{percent}% <span size='large' rise='-1500'>{icon}</span>",
+    "format": "{percent}% <span size='x-large' rise='-1500'>{icon}</span>",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "battery": {
@@ -55,15 +55,15 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% <span size='large' rise='-1500'>{icon}</span>",
-    "format-charging": "{capacity}% <span size='large' rise='-1500'></span>",
-    "format-plugged": "{capacity}% <span size='large' rise='-1500'></span>",
+    "format": "{capacity}% <span size='x-large' rise='-1500'>{icon}</span>",
+    "format-charging": "{capacity}% <span size='x-large' rise='-1500'>󰂄</span>",
+    "format-plugged": "{capacity}% <span size='x-large' rise='-1500'>󰚥</span>",
     "format-alt": "{time} <span size='x-large' rise='-1500'>{icon}</span>",
-    "format-icons": ["", "", "", "", "", "", "", "", "", "", "", ""]
+    "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     //"format-icons": ["", "", "", "", ""]
   },
   "idle_inhibitor": {
-    "format": "<span size='large' rise='-1500'>{icon}</span>",
+    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
     "format-icons": {
       "activated": "󰈈",
       "deactivated": "󰈉"
@@ -71,11 +71,11 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% <span size='large' rise='-1500'>{icon}</span> {format_source}",
-    "format-bluetooth": "{volume}% <span size='large' rise='-1500'>{icon} </span> {format_source}",
-    "format-bluetooth-muted": "<span size='large' rise='-1500'>󰝟 {icon} </span> {format_source}",
-    "format-muted": "<span size='large' rise='-1500'>󰝟</span> {format_source}",
-    "format-source": "{volume}% <span size='large' rise='-1500'>󰍬</span>",
+    "format": "{volume}% <span size='x-large' rise='-1500'>{icon}</span> {format_source}",
+    "format-bluetooth": "{volume}% <span size='x-large' rise='-1500'>{icon} </span> {format_source}",
+    "format-bluetooth-muted": "<span size='x-large' rise='-1500'>󰝟 {icon} </span> {format_source}",
+    "format-muted": "<span size='x-large' rise='-1500'>󰝟</span> {format_source}",
+    "format-source": "{volume}% <span size='x-large' rise='-1500'>󰍬</span>",
     "format-source-muted": "󰍭",
     "format-icons": {
       "headphone": "󰋎",
@@ -89,9 +89,9 @@
     "on-click": "pavucontrol"
   },
   "power-profiles-daemon": {
-    "format": "<span size='large' rise='-1500'>{icon}</span>",
+    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
     "tooltip-format": "power profile: {profile}\ndriver: {driver}",
-    "tooltip": false,
+    "tooltip": true,
     "format-icons": {
       "default": "󱐋",
       "performance": "󱐋",
@@ -102,35 +102,35 @@
   "custom/lock": {
     "tooltip": false,
     "on-click": "swaylock & systemctl suspend",
-    "format": "<span size='large' rise='-1500'>󰌾</span>"
+    "format": "<span size='x-large' rise='-1500'>󰌾</span>"
   },
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout --protocol layer-shell -b 6",
-    "format": "<span size='large' rise='-1500'>󰐥</span>"
+    "format": "<span size='x-large' rise='-1500'>󰐥</span>"
   },
   "sway/scratchpad": {
-    "format": "{count} <span size='large' rise='-1500'>{icon}</span>",
+    "format": "{count} <span size='x-large' rise='-1500'>{icon}</span>",
     "show-empty": false,
     "format-icons": ["󰖲"],
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
   "network": {
-    "format-wifi": "<span size='large' rise='-1500'>{icon}</span> {essid}",
-    "format-ethernet": "<span size='large' rise='-1500'>󰈀</span>  {essid}",
-    "format-linked": "{ifname} (no ip)  <span size='large' rise='-1500'></span>",
-    "format-disconnected": "<span size='large' rise='-1500'>󰤮</span>  disconnected",
-    "format-disabled": "<span size='large' rise='-1500'>󰤭</span>  disabled",
+    "format-wifi": "<span size='x-large' rise='-1500'>{icon}</span> {essid}",
+    "format-ethernet": "<span size='x-large' rise='-1500'>󰈀</span> {essid}",
+    "format-linked": "{ifname} (no ip) <span size='x-large' rise='-1500'></span>",
+    "format-disconnected": "<span size='x-large' rise='-1500'>󰤮</span> disconnected",
+    "format-disabled": "<span size='x-large' rise='-1500'>󰤭</span> disabled",
     "tooltip-format-wifi": "signal strenght: {signalstrength}% | down speed: {bandwidthdownbits}, up speed: {bandwidthupbits}",
     "on-click": "~/.local/bin/rofi-wifi-menu",
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "max-length": 20
   },
   "bluetooth": {
-    "format": "<span size='large' rise='-1500'>{icon}</span> {status}",
-    "format-connected": "<span size='large' rise='-1500'>󰂯</span> {device_alias}",
-    "format-connected-battery": "<span size='large' rise='-1500'>󰂯</span> {device_alias} ({device_battery_percentage}%)",
+    "format": "<span size='x-large' rise='-1500'>{icon}</span> {status}",
+    "format-connected": "<span size='x-large' rise='-1500'>󰂯</span> {device_alias}",
+    "format-connected-battery": "<span size='x-large' rise='-1500'>󰂯</span> {device_alias} ({device_battery_percentage}%)",
     "on-click": "~/.local/bin/rofi-bluetooth-menu",
     "format-icons": {
       "on": "󰂯",

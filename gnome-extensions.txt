@@ -9,8 +9,3 @@ appindicatorsupport@rgcjonas.gmail.com
 caffeine@patapon.info
 clipboard-indicator@tudmotu.com
 places-menu@gnome-shell-extensions.gcampax.github.com
-pomodoro@arun.codito.in
-pop-shell@system76.com
-apps-menu@gnome-shell-extensions.gcampax.github.com
-launch-new-instance@gnome-shell-extensions.gcampax.github.com
-window-list@gnome-shell-extensions.gcampax.github.com

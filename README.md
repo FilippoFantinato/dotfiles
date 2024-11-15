@@ -61,3 +61,10 @@ Install VS Code extensions:
 ```bash
 ./install-vscode-extensions
 ```
+
+## Dependencies
+
+```bash
+dnf install swaync wlogout wlsunset \ 
+            zsh tmux
+```
