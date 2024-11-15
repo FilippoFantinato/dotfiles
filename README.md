@@ -12,16 +12,6 @@ Personal dotfiles and scripts managed with GNU stow.
 - waybar
 - wlogout
 
-## Other
-
-- bash
-- VS Code
-- git
-- neovim
-- sublime text
-- zathura
-- zsh
-
 ## Gnome shell
 
 Dump dconf settings:
@@ -80,5 +70,6 @@ dnf install sway-config-fedora      \
 - [MesloLGS Nerd Font (zsh version)](https://github.com/romkatv/powerlevel10k/blob/master/font.md)
 
 ```bash
-dnf install cascadia-mono-nf-fonts fira-code-fonts
+dnf install cascadia-mono-nf-fonts \ 
+            fira-code-fonts
 ```
