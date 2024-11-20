@@ -59,10 +59,10 @@ Install VS Code extensions:
 - [FZF git](https://github.com/junegunn/fzf-git.sh)
 
 ```bash
-dnf install sway-config-fedora      \
-            swaync wlogout wlsunset \
-            zathura fzf             \
-            zsh tmux
+dnf install sway-config-fedora          \
+            swaync wlogout wlsunset     \
+            zathura zathura-pdf-mupdf   \
+            zsh tmux fzf
 ```
 
 ## Fonts

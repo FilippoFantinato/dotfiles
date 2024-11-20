@@ -1,0 +1,24 @@
+#!/bin/bash
+
+capacity=`cat /sys/class/power_supply/BAT0/capacity`
+status=`cat /sys/class/power_supply/BAT0/status`
+mode=`tuned-adm active`
+
+if [[ capacity -le 5 ]]; then
+  notify-send -i battery-caution-symbolic \
+    -u critical \
+    -h "int:value:$capacity" \
+    "Critical battery level: $capacity%"
+elif [[ capacity -le 15 ]]; then
+  notify-send -i battery-level-10 \
+    -u critical \
+    -h "int:value:$capacity" \
+    "Very low battery level: $capacity%"
+elif [[ capacity -le 30 ]]; then
+  notify-send -e -t 2000 \
+    -i battery-level-20 \
+    -u normal \
+    -h "int:value:$capacity" \
+    "Low battery level: $capacity%"
+fi
+

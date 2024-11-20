@@ -1,73 +1,37 @@
 {
-  // "layer": "top", // waybar at top layer
-  // "position": "top", // waybar position (top|bottom|left|right)
+  // "layer": "top",
+  // "position": "top",
   "height": 20,
   // "spacing": 4,
-  // "width": 1280, // waybar width
-  // choose the order of the modules
+  // "width": 1280,
   "modules-left": [
     "sway/workspaces",
     "sway/language",
+    "network",
+    "bluetooth",
     "sway/mode",
     "sway/scratchpad",
     "custom/music"
   ],
   "modules-center": ["clock"],
   "modules-right": [
-    "network",
-    "bluetooth",
     "tray",
     "idle_inhibitor",
     "power-profiles-daemon",
-    "pulseaudio",
-    "backlight",
-    "battery",
-    "custom/lock",
-    "custom/power"
+    "group/output-devices",
+    "group/hardware",
+    "group/power"
   ],
-  "tray": {
-    "icon-size": 21,
-    "spacing": 10
-  },
-  "sway/language": {
-    "format": "<span size='x-large' rise='-1500'>󰌌</span> {}"
-  },
-  "custom/music": {
-    "format": "<span size='x-large' rise='-1500'>󰝚</span> {}",
-    "escape": true,
-    "interval": 5,
-    "tooltip": false,
-    "exec": "playerctl metadata --format='{{ title }}'",
-    "on-click": "playerctl play-pause",
-    "max-length": 50
-  },
-  "clock": {
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "format": "<span size='x-large' rise='-1500'>󰥔</span> {:%R  <span size='x-large' rise='-1500'>󰃭</span> %d %b, %a}"
+  // Start output devices group
+  "group/output-devices": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "backlight"]
   },
   "backlight": {
     "device": "intel_backlight",
     "format": "{percent}% <span size='x-large' rise='-1500'>{icon}</span>",
+    "tooltip": false,
     "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% <span size='x-large' rise='-1500'>{icon}</span>",
-    "format-charging": "{capacity}% <span size='x-large' rise='-1500'>󰂄</span>",
-    "format-plugged": "{capacity}% <span size='x-large' rise='-1500'>󰚥</span>",
-    "format-alt": "{time} <span size='x-large' rise='-1500'>{icon}</span>",
-    "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    //"format-icons": ["", "", "", "", ""]
-  },
-  "idle_inhibitor": {
-    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
-    "format-icons": {
-      "activated": "󰈈",
-      "deactivated": "󰈉"
-    }
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -88,27 +52,94 @@
     },
     "on-click": "pavucontrol"
   },
-  "power-profiles-daemon": {
-    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
-    "tooltip-format": "power profile: {profile}\ndriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "󱐋",
-      "performance": "󱐋",
-      "balanced": "󰗑",
-      "power-saver": "󰌪"
-    }
+  // End output devices group
+  // Start hardware group
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": ["battery", "memory", "cpu"]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    // "on-update": "~/.local/bin/battery-notifier",
+    "format": "{capacity}% <span size='large' rise='-1500'>{icon}</span>",
+    "format-charging": "{capacity}% <span size='x-large' rise='-1500'>󰂄</span>",
+    "format-plugged": "{capacity}% <span size='x-large' rise='-1500'>󰚥</span>",
+    "format-alt": "{time} <span size='x-large' rise='-1500'>{icon}</span>",
+    "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    //"format-icons": ["", "", "", "", ""]
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "{usage}% 󰘚"
+  },
+  "memory": {
+    "interval": 10,
+    "format": "{percentage}% 󰍛",
+    "tooltip-format": "RAM: {used:0.1f}GiB/{total:0.1f}GiB ({percentage}%)\nSWAP: {swapUsed:0.1f}GiB/{swapTotal:0.1f}GiB ({swapPercentage}%)"
+  },
+  // End hardware group
+  // Start power group
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/suspend",
+      "custom/lock",
+      "custom/logout",
+      "custom/hibernate",
+      "custom/reboot",
+      "custom/shutdown"
+    ]
   },
   "custom/lock": {
-    "tooltip": false,
-    "on-click": "swaylock & systemctl suspend",
+    "tooltip": true,
+    "tooltip-format": "lock",
+    "on-click": "loginctl lock-session",
     "format": "<span size='x-large' rise='-1500'>󰌾</span>"
   },
-  "custom/power": {
-    "tooltip": false,
-    "on-click": "wlogout --protocol layer-shell -b 6",
+  "custom/reboot": {
+    "tooltip": true,
+    "tooltip-format": "reboot",
+    "on-click": "systemctl reboot",
+    "format": "<span size='x-large' rise='-1500'>󰜉</span>"
+  },
+  "custom/logout": {
+    "tooltip": true,
+    "tooltip-format": "logout",
+    "on-click": "loginctl terminate-user $USER",
+    "format": "<span size='x-large' rise='-1500'>󰍃</span>"
+  },
+  "custom/shutdown": {
+    "tooltip": true,
+    "tooltip-format": "shutdown",
+    "on-click": "systemctl poweroff",
     "format": "<span size='x-large' rise='-1500'>󰐥</span>"
   },
+  "custom/hibernate": {
+    "tooltip": true,
+    "tooltip-format": "hibernate",
+    "on-click": "systemctl hibernate",
+    "format": "<span size='x-large' rise='-1500'>󰤁</span>"
+  },
+  "custom/suspend": {
+    "tooltip": true,
+    "on-click": "swaylock & systemctl suspend",
+    "tooltip-format": "suspend",
+    "format": "<span size='x-large' rise='-1500'>󰏦</span>"
+  },
+  // End power group
+
+  // Sway modules
   "sway/scratchpad": {
     "format": "{count} <span size='x-large' rise='-1500'>{icon}</span>",
     "show-empty": false,
@@ -116,6 +147,19 @@
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
+  "sway/language": {
+    "format": "<span size='x-large' rise='-1500'>󰌌</span> {}"
+  },
+  "sway/workspaces": {
+    "persistent-workspaces": {
+      "1": ["eDP-1"]
+    }
+  },
+  "sway/mode": {
+    "format": "<span size='x-large' rise='-1500'>󰩮</span> {}"
+  },
+
+  // Connectivity modules
   "network": {
     "format-wifi": "<span size='x-large' rise='-1500'>{icon}</span> {essid}",
     "format-ethernet": "<span size='x-large' rise='-1500'>󰈀</span> {essid}",
@@ -134,7 +178,57 @@
     "on-click": "~/.local/bin/rofi-bluetooth-menu",
     "format-icons": {
       "on": "󰂯",
-      "off": "󰂲"
+      "off": "󰂲",
+      "disabled": "󰂲"
+    }
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 10
+  },
+  "custom/music": {
+    "format": "<span size='x-large' rise='-1500'>󰝚</span> {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ title }}'",
+    "on-click": "playerctl play-pause",
+    "max-length": 50
+  },
+  "clock": {
+    "format": "<span size='x-large' rise='-1500'>󰥔</span> {:%R  <span size='x-large' rise='-1500'>󰃭</span> %d %b, %a}",
+    "locale": "en_IE.utf8",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#89b4fa'><b>{}</b></span>",
+        "days": "<span color='#f5c2e7'><b>{}</b></span>",
+        "weeks": "<span color='#94e2d5'><b>W{}</b></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#89b4fa'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "idle_inhibitor": {
+    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉"
+    }
+  },
+  "power-profiles-daemon": {
+    "format": "<span size='xx-large' rise='-1500'>{icon}</span>",
+    "tooltip-format": "power profile: {profile}\ndriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "󰗑",
+      "performance": "󱐋",
+      "balanced": "󰗑",
+      "power-saver": "󰌪"
     }
   }
 }

@@ -1,5 +1,7 @@
 @import "mocha.css";
 
+/* General */
+
 * {
   font-family: "Cascadia Mono NF", monospace;
   font-size: 13px;
@@ -20,6 +22,8 @@ tooltip label {
   color: @text;
 }
 
+/* Workspaces */
+
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
@@ -35,7 +39,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  color: @sky;
+  color: @blue;
 }
 
 #workspaces button.focused {
@@ -44,53 +48,74 @@ tooltip label {
 
 #workspaces button.urgent {
   color: @red;
-}
-
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#custom-lock,
-#custom-power,
-#custom-night-light,
-#language,
-#idle_inhibitor,
-#power-profiles-daemon,
-#mode,
-#scratchpad,
-#network,
-#bluetooth {
-  padding: 0 1rem;
-  margin: 5px 0;
   background-color: @surface0;
 }
 
-#tray:hover,
-#idle_inhibitor:hover,
-#power-profiles-daemon:hover,
-#pulseaudio:hover,
-#backlight:hover,
-#battery:hover,
-#custom-lock:hover,
-#custom-power:hover,
-#custom-night-light:hover,
-#custom-music:hover,
-#network:hover,
-#bluetooth:hover {
-  background-color: @surface2;
+/* Groups */
+
+#power,
+#hardware,
+#output-devices {
+  border-radius: 1rem;
+  padding: 0rem;
+  margin: 5px 5px 5px 0;
+  background-color: @surface0;
 }
 
-#clock {
-  color: @blue;
+#custom-lock,
+#custom-shutdown,
+#custom-reboot,
+#custom-logout,
+#custom-hibernate,
+#custom-suspend,
+#battery,
+#cpu,
+#memory,
+#pulseaudio,
+#backlight {
   border-radius: 1rem;
+  padding: 0 1rem;
 }
+
+/* Power group */
+
+#power {
+  margin-right: 1rem;
+}
+
+#custom-lock {
+  color: @lavender;
+}
+
+#custom-reboot {
+  color: @yellow;
+}
+
+#custom-logout {
+  color: @green;
+}
+
+#custom-shutdown {
+  color: @red;
+}
+
+#custom-lock {
+  color: @lavender;
+}
+
+#custom-hibernate {
+  color: @blue;
+}
+
+#custom-suspend {
+  color: @peach;
+}
+
+/* Hardware group */
 
 #battery {
   color: @green;
   border-radius: 0 1rem 1rem 0;
-  margin-right: 5px;
 }
 
 #battery.charging {
@@ -101,39 +126,48 @@ tooltip label {
   color: @red;
 }
 
+/* Output devices */
+
 #backlight {
   color: @yellow;
 }
 
 #pulseaudio {
   color: @blue;
-  border-radius: 1rem 0px 0px 1rem;
+}
+
+#memory {
+  color: @yellow;
+}
+
+#cpu {
+  color: @mauve;
+}
+
+/* Single modules */
+
+#custom-music,
+#tray,
+#clock,
+#language,
+#idle_inhibitor,
+#power-profiles-daemon,
+#mode,
+#scratchpad,
+#network,
+#bluetooth {
+  padding: 0 1rem;
+  margin: 5px 5px 5px 0;
+  border-radius: 1rem;
+  background-color: @surface0;
+}
+
+#clock {
+  color: @blue;
 }
 
 #custom-music {
   color: @mauve;
-  border-radius: 1rem;
-}
-
-#custom-lock {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @lavender;
-}
-
-#custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @red;
-}
-
-#tray {
-  margin-right: 5px;
-  border-radius: 1rem;
-}
-
-#power-profiles-daemon {
-  border-radius: 0 1rem 1rem 0;
-  margin-right: 5px;
 }
 
 #power-profiles-daemon.performance {
@@ -148,10 +182,6 @@ tooltip label {
   color: @green;
 }
 
-#idle_inhibitor {
-  border-radius: 1rem 0 0 1rem;
-}
-
 #idle_inhibitor.activated {
   color: @green;
 }
@@ -160,27 +190,22 @@ tooltip label {
   color: @red;
 }
 
-#language {
-  border-radius: 1rem;
-  margin-right: 5px;
-}
+/* All modules */
 
-#mode {
-  border-radius: 1rem;
-  margin-right: 5px;
-}
-
-#scratchpad {
-  border-radius: 1rem;
-  margin-right: 5px;
-}
-
-#network {
-  margin-right: 5px;
-  border-radius: 1rem;
-}
-
-#bluetooth {
-  margin-right: 5px;
-  border-radius: 1rem;
+#tray:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#custom-lock:hover,
+#custom-shutdown:hover,
+#custom-suspend:hover,
+#custom-reboot:hover,
+#custom-hibernate:hover,
+#custom-logout:hover,
+#custom-music:hover,
+#network:hover,
+#bluetooth:hover {
+  background-color: @surface2;
 }

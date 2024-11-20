@@ -229,6 +229,8 @@ exec --no-startup-id wlsunset -S 07:00 -s 18:30
 
 for_window [app_id="google-chrome"] inhibit_idle fullscreen
 
+workspace 1 output eDP-1
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
