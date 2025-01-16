@@ -149,3 +149,6 @@ _fzf_comprun() {
   esac
 }
 
+
+
+[ -f "/home/filippofantinato/.ghcup/env" ] && . "/home/filippofantinato/.ghcup/env" # ghcup-env

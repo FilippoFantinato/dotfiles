@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Switch gnome wallpaper
+Exec=/home/filippofantinato/.local/bin/switch-gnome-wallpaper
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

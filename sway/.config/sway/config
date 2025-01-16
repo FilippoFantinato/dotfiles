@@ -33,7 +33,10 @@ set $menu $rofi_cmd -show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /home/filippofantinato/Pictures/wallpaper/cloud.png fill
+# output * bg /home/filippofantinato/Pictures/wallpaper/cloud.png fill
+
+output * bg `find $HOME/Pictures/aesthetic-wallpapers/images -type f | shuf -n 1` fill
+
 #
 # Example configuration:
 #

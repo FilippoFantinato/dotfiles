@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+pic=`find $HOME/Pictures/aesthetic-wallpapers/images -type f | shuf -n 1`
+
+gsettings set org.gnome.desktop.background picture-uri "file:///$pic"
+gsettings set org.gnome.desktop.background picture-uri-dark "file:///$pic"
