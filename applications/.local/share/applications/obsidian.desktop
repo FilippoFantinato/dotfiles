@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/filippofantinato/.local/bin/obsidian.AppImage
+Icon=/home/filippofantinato/.local/share/icons/custom/obsidian.svg
+NoDisplay=false
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/eclipse+command;
+
