@@ -16,7 +16,7 @@
   empty = git commit --allow-empty
 
 [core]
-    pager = delta
+	pager = more -
 
 [interactive]
     diffFilter = delta --color-only
