@@ -3,7 +3,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
     "terminal.integrated.fontFamily": "'MesloLGS NF'",
-    "cmake.configureOnOpen": true,
     "latex-workshop.latex.recipes": [
         {
             "name": "xelatexmk",
@@ -146,26 +145,47 @@
     "debug.allowBreakpointsEverywhere": true,
     "explorer.confirmDelete": false,
     "latex-workshop.latex.autoBuild.run": "never",
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
     "latex-workshop.view.pdf.external.viewer.command": "zathura",
     "latex-workshop.view.pdf.external.viewer.args": [
         "--synctex-editor-command",
         "code --no-sandbox -r -g %{input}:%{line}",
         "%PDF%"
     ],
-    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latex": "tex-fmt",
     "editor.formatOnSave": true,
     "editor.rulers": [
         120
     ],
-    "haskell.manageHLS": "PATH",
     "[typst]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    }
+    },
+    "terminal.integrated.suggest.inlineSuggestion": "off",
+    "terminal.integrated.suggest.enabled": false,
+    "mesonbuild.downloadLanguageServer": true,
+    "rewrap.autoWrap.enabled": true,
+    "agdaMode.connection.paths": [
+        "/usr/bin/agda"
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "cSpell.userWords": [
+        "dealigning"
+    ],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "terminal.integrated.initialHint": false,
+    "vim.hlsearch": true,
+    "editor.lineNumbers": "relative",
+    "vim.leader": "<Space>",
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "workbench.editor.empty.hint": "hidden",
+    "chat.byokUtilityModelDefault": "mainAgent",
+    "claudeCode.preferredLocation": "panel"
 }

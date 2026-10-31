@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-FileCopyrightText: 2026 JakobDev
+[Desktop Entry]
+Name=Preview Metainfo
+Comment=Preview a local metainfo file
+Categories=System;
+Exec=gnome-software --show-metainfo %f
+Terminal=false
+Type=Application
+Icon=org.gnome.Software
+StartupNotify=true
+NoDisplay=true
+X-GNOME-Autostart-enabled=false
+MimeType=application/x-freedesktop-appstream-component;

@@ -17,6 +17,8 @@ export PATH
 export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 
 # User specific aliases and functions
+#
+alias docker='podman'
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
         if [ -f "$rc" ]; then
@@ -25,3 +27,8 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+. "$HOME/.cargo/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/filippofantinato/.local/bin:$PATH"

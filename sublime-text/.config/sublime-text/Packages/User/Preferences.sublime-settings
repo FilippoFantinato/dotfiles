@@ -1,10 +1,8 @@
 {
-	"ignored_packages":
-	[
-		"Vintage",
+	"ignored_packages": [
     ],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-	"theme": "Default Dark.sublime-theme",
+	// "color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+	// "theme": "Adaptive.sublime-theme",
 	"index_files": true,
 	"file_exclude_patterns":
     [
@@ -54,4 +52,6 @@
         120
     ],
     "font_size": 10,
+    "color_scheme": "Mariana.sublime-color-scheme",
+    "theme": "auto",
 }

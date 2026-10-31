@@ -11,12 +11,12 @@
 [fetch]
 	prune = true
 [pull]
-	ff = only
+	rebase = false
 [alias]
   empty = git commit --allow-empty
 
 [core]
-	pager = more -
+	pager = cat
 
 [interactive]
     diffFilter = delta --color-only
@@ -36,3 +36,5 @@
 [diff]
     colorMoved = default
 
+[credential]
+	helper = store
